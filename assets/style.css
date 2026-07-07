@@ -82,7 +82,7 @@ footer {
   position: absolute;
   left: 0.70rem;
   top: 0.75rem;
-  bottom: 11rem;
+  bottom: 10rem;
   width: 2px;
   background: var(--muted);
   opacity: 0.3;
