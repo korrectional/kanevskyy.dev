@@ -31,6 +31,12 @@ function build() {
   fs.copyFileSync(path.join(ROOT, "homepage.html"), path.join(DIST_DIR, "index.html"));
   fs.copyFileSync(path.join(ROOT, "profile-pic.png"), path.join(DIST_DIR, "profile-pic.png"));
 
+  // privacy page
+  const PRIVACY_DIR = path.join(DIST_DIR, "privacy");
+  fs.mkdirSync(PRIVACY_DIR, { recursive: true });
+  fs.copyFileSync(path.join(ROOT, "privacy.html"), path.join(PRIVACY_DIR, "index.html"));
+
+
   const blogFiles = fs.existsSync(POSTS_DIR)
     ? fs.readdirSync(POSTS_DIR).filter(f => f.endsWith(".md"))
     : [];
