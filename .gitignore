@@ -21,3 +21,8 @@ coverage/
 # OS files
 .DS_Store
 Thumbs.db
+
+
+# Model stuff
+HANDOFF.md
+CLAUDE.md
