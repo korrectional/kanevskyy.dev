@@ -1,11 +1,21 @@
 ---
-title: Nothing here yet
-date: 2026-07-05
-description: About how there's nothing here yet.
+title: For the sometimes unmotivated hobbyist developer
+date: 2026-07-12
+description: A letter
 ---
+Just a warning, this is a little bit of a rant.
 
-There are no blog posts here. I like blog posts, problem is nobody reads them so this is only for when I feel like writing for myself, which is like once every couple weeks...
+Once in a while, when I have a lot on my plate, I like to go outside in my neighborhood and start walking in circles (which convininetly happens to have its main road circle around a school, which makes looping quite simple) and think about my problems, outloud. After at most three laps, I have them sorted out, and a plan of action written out in my mind. 
 
-```js
-console.log("hi");
-```
+Often forgetting about this trick, I spend my days often thinking about wathever issues I currently have to take care of or things I have to do, or simply put, I live my life like a normal person. Yet our days are limited, and each single decision one takes at a moment (chosing to do the dishes instead of doing literally anything else) dictate our future. 
+
+This is especially true for younger people, and most actions can be roughly divided into two categories, the ones that sacrifice the present for the future (e.g. study instead of hanging out) and the opposite (e.g. smoke), and this allows us to analyze actions mathematically: not studying the material right now would cost you 3 days in catching up later before the exam, so you should only decide to study if it takes less than 3 days, otherwise it's a bad idea. Therefore the basic productive mindset of always using the present to benefit in the future is not necessarely true. But that doesn't really matter to me, since most of the time I do not follow a productive mindset, instead I follow the path of self-destruction: wathever happens to pop into my mind, I'll do it, and because of the way humans are wired, if left unchecked, I will begin a proccess of constantly wasting my time on the internet. 
+
+So here I want to propose, to myself, and to whom it may concern, a framework to ensure that I do not end up in such loops, and instead take actions that maximally benefit me (by the way, helping a kid take a ball from a tree IS something that brings short term benefit: you feel good about yourself, so do not consider seemingly philanthropic actions to be exluded from this, but I digress). So here's the system: on awakening, it's a good idea to think about what you want to do with your day aside from obvious tasks like work and eventual sleep. By the way this is the moment when I should point out that I've had a lot of free time recently: during my senior year of high school, due to me getting my language credits from languages I already knew, I only had two blocks every day, and would arrive at approximatedly 10 am and have time to do wathever came to mind, and you know how that goes. Now I'm waiting for college to start, so I'm still highly vulnerable to the self destruction cycle. Getting that out of the way, which I mention because I'm almost sure that a father with 3 children probably does not have much of the freedom to do wathever he wants with his time, the reason for the activity of deciding the day's actions while still in bed in the morning is to avoid having a large period of time in your day when there is absolutely nothing to do, since that is when it becomes easy to succumb to self-sabotage.
+
+Doing this requires a minimal amount of discipline, which I happen not to have (it takes around 40 days for something to become a habit, I'll hold on for 21 days on average and drop wathever new habit it should have become). This is not completely true by the way, but its the case with 2/3 of things I do. The other 1/3 I actually succeed in and then it helps me somehow. It's actually quite easy to cultivate it in a way that doesn't involve sending oneself to bootcamp: meditation. Just sit somewhere and stare at the wall for 5 minutes, that will usually give you a lot of focus (not to speak about the benefits of being more aware of the passage of time, as well as meditation's propreties of helping categorize thoughts and help solve problems). By the way, meditation does not mean no thinking, one is supposed to just sit in silence and after short thoughts always come back to the state of pure concentration. 
+
+Anyway, like I warned, this was a big rant. I felt like writing it because I think some people need this sort of simple and obvious advice, even if you do not struggle too much with motivation (including me). Personally, I go in small waves, one month its not great then another is a lot of productivity, although that is just regarding voluntary work like projects and writing essays long before the due date, since other aspects like social life and going outside don't really change much. I say this just to explain that you don't have to be too deep in trouble to have this "framework" help you. 
+
+Written in a short burst at 2am with love,
+David
