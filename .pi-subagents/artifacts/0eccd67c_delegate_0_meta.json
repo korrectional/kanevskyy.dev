@@ -1,0 +1,37 @@
+{
+  "runId": "0eccd67c",
+  "agent": "delegate",
+  "task": "--async \"Make Boids always white, read HANDOFF.md and AGENTS.md for additional info\"",
+  "exitCode": 1,
+  "usage": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheWrite": 0,
+    "cost": 0,
+    "turns": 0
+  },
+  "model": "openrouter/deepseek/deepseek-v4-flash",
+  "attemptedModels": [
+    "openrouter/deepseek/deepseek-v4-flash"
+  ],
+  "modelAttempts": [
+    {
+      "model": "openrouter/deepseek/deepseek-v4-flash",
+      "success": false,
+      "exitCode": 1,
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "cost": 0,
+        "turns": 0
+      }
+    }
+  ],
+  "durationMs": 28749,
+  "toolCount": 0,
+  "transcriptPath": "C:\\Users\\david\\src\\--misc\\kanevskyy.dev\\.pi-subagents\\artifacts\\0eccd67c_delegate_0_transcript.jsonl",
+  "timestamp": 1783911077091
+}

@@ -1,0 +1,1 @@
+The fix is verified. Now let me write the structured acceptance report.

@@ -1,0 +1,4 @@
+(function(){register('Stardust','A warp-speed 3D starfield with smooth depth motion.','geometry',
+function(c){c._stars=Array.from({length:800},function(){return{x:(Math.random()-.5)*2,y:(Math.random()-.5)*2,z:Math.random()}})},
+function(c,w,h,t){var s=c._stars,cx=w/2,cy=h/2;c.fillStyle='#000';c.fillRect(0,0,w,h);for(var i=0;i<s.length;i++){s[i].z-=.008;if(s[i].z<=0){s[i].x=(Math.random()-.5)*2;s[i].y=(Math.random()-.5)*2;s[i].z=1}var px=(s[i].x/s[i].z)*w/2+cx,py=(s[i].y/s[i].z)*h/2+cy,d=1-s[i].z,r=d*3+1;if(px<0||px>w||py<0||py>h)continue;var a=Math.min(1,1.5*d);c.beginPath();c.arc(px,py,Math.max(.5,r),0,Math.PI*2);c.fillStyle='rgba('+(180+75*d)+','+(200+55*d)+',255,'+a+')';c.fill()}}
+,'The illusion of 3D is created by moving the stars at different speeds based on how far away they are from the viewer.');})();

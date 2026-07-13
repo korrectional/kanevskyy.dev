@@ -1,0 +1,1 @@
+File is untracked (new), git diff shows no delta because it isn't tracked yet. Parse check passes, no staged files.

@@ -1,0 +1,4 @@
+(function(){register('Aurora','Smooth gradient ribbons that ripple like the northern lights.','generative',
+function(c){c._n=new PerlinNoise()},
+function(c,w,h,t){c.fillStyle='rgba(0,0,0,.03)';c.fillRect(0,0,w,h);var t1=t*.0001,t2=t*.00008,t3=t*.0015,t4=t*.0008;for(var i=0;i<4;i++){c.beginPath();var iHalf=i*.5,iPoint3=i*.3,i6=i*.006,s1Off=t3+i,s2Off=t4+i6,yOff=h*.5+i*20-40;for(var x=0;x<=w;x+=4){var y=c._n.noise2d(x*.003+iHalf+t1,iPoint3+t2)*50+Math.sin(x*.005+s1Off)*15+Math.sin(x*.006+s2Off)*10;c.lineTo(x,y+yOff)}var hue=(i*60+t*.02)%360;c.strokeStyle='hsla('+hue+',80%,55%,.3)';c.lineWidth=2;c.stroke()}}
+,'Multiple layered sine waves with varying amplitudes, colors, and phase offsets create the illusion of flowing northern lights.');})();

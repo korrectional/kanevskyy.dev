@@ -1,6 +1,7 @@
 ---
 title: Every Week!
 description: Projects projects projects, last year I did so many I wouldn't be able to count them all. It's more than 25 I think
+importance: major
 ---
 [github url](https://github.com/korrectional/Every-Week) 
 

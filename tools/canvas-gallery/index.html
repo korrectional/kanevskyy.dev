@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canvas Gallery — kanevskyy.dev</title>
+<meta name="description" content="A catalog of smooth HTML canvas tricks that bring websites to life — no frameworks, just raw canvas API.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="back" id="backLink" href="/tools/">&larr; back to tools</a>
+<header>
+  <h1>Canvas Gallery</h1>
+  <p>A catalog of smooth HTML canvas tricks that bring websites to life — no frameworks, just raw canvas API.</p>
+</header>
+
+<!-- ── Showcase view (shown when ?effect= is set) ── -->
+<div class="showcase" id="showcase" style="display:none">
+  <a class="back" href="/tools/canvas-gallery/">&larr; back to gallery</a>
+  <div class="canvas-wrap">
+    <canvas id="showcase-canvas"></canvas>
+  </div>
+  <div class="content">
+    <h2 id="showcase-title"></h2>
+    <span class="tag" id="showcase-tag"></span>
+    <p class="explanation" id="showcase-explain"></p>
+    <pre><code id="showcase-code"></code></pre>
+  </div>
+</div>
+
+<div class="gallery" id="gallery"></div>
+
+<div class="overlay" id="overlay">
+  <div class="overlay-header">
+    <h2 id="overlay-title"></h2>
+    <button class="btn-pause" id="btnPause">pause</button>
+    <button class="btn-restart" id="btnRestart">restart</button>
+    <button class="btn-close" id="btnClose">&times;</button>
+  </div>
+  <div class="overlay-body">
+    <canvas id="overlay-canvas"></canvas>
+    <div class="overlay-code" id="overlay-code">
+      <button class="code-toggle" id="ocToggle">Show code</button>
+      <pre><code id="ocContent"></code></pre>
+    </div>
+  </div>
+</div>
+
+<script>
+var effects=[];
+function register(name,desc,tag,initFn,drawFn,destroyFn,howItWorks){
+  // If destroyFn is a string, it's actually howItWorks with no destroy function
+  if(typeof destroyFn==='string'){howItWorks=destroyFn;destroyFn=undefined}
+  var jsn=function(s){return "'"+s.replace(/'/g,"\\'")+"'"};
+  var code='register('+jsn(name)+','+jsn(desc)+','+jsn(tag)+',\n  '+initFn.toString()+',\n  '+drawFn.toString()+(destroyFn?',\n  '+destroyFn.toString():'')+(howItWorks?',\n  '+jsn(howItWorks):'')+'\n)';
+  effects.push({name:name,desc:desc,tag:tag,init:initFn,draw:drawFn,destroy:destroyFn||function(){},howItWorks:howItWorks||desc,code:code});
+}
+</script>
+<script src="util.js"></script>
+<script src="effects/effect-01-stardust.js"></script>
+<script src="effects/effect-02-particle-swarm.js"></script>
+<script src="effects/effect-03-flow-field.js"></script>
+<script src="effects/effect-04-helix-ribbon.js"></script>
+<script src="effects/effect-05-matrix-rain.js"></script>
+<script src="effects/effect-06-wave-grid.js"></script>
+<script src="effects/effect-07-fireworks.js"></script>
+<script src="effects/effect-08-aurora.js"></script>
+<script src="effects/effect-10-gravity-well.js"></script>
+<script src="effects/effect-11-shadow-cubes.js"></script>
+<script src="effects/effect-12-boids.js"></script>
+<script src="effects/effect-13-magnetic-field.js"></script>
+<script src="effects/effect-14-water-ripple.js"></script>
+<script src="effects/effect-15-elastic-mesh.js"></script>
+<script src="effects/effect-16-particle-trails.js"></script>
+<script src="effects/effect-17-orbital.js"></script>
+<script src="effects/effect-18-rotating-cubes.js"></script>
+<script src="effects/effect-19-ember-fall.js"></script>
+<script src="effects/effect-20-l-system.js"></script>
+<script src="effects/effect-21-cellular-automata.js"></script>
+<script src="effects/effect-22-voronoi.js"></script>
+<script src="effects/effect-24-morphing-shapes.js"></script>
+<script src="effects/effect-25-hypnotic-spiral.js"></script>
+<script src="effects/effect-27-terrain.js"></script>
+<script src="effects/effect-29-fractal-fern.js"></script>
+<script src="effects/effect-36-confetti.js"></script>
+<script src="effects/effect-37-rain.js"></script>
+<script src="effects/effect-39-bubbles.js"></script>
+<script src="effects/effect-40-smoke.js"></script>
+<script src="effects/effect-41-galaxy.js"></script>
+<script src="effects/effect-45-metaballs.js"></script>
+<script src="effects/effect-47-twister.js"></script>
+<script src="effects/effect-49-bouncing-balls.js"></script>
+<script src="effects/effect-50-rymd.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

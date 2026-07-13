@@ -1,0 +1,1 @@
+Done. The Boids effect now draws all birds as solid white (`#fff`) instead of the previous per-boid animated HSLA color. The description is also updated from "colorful birds" to "white birds".

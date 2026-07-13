@@ -1,0 +1,6 @@
+(function(){register('Bouncing Balls','Colorful balls bouncing around the canvas with realistic physics.','retro',
+function(c){var cw=c.canvas.width/2,ch=c.canvas.height/2;c._balls=[];for(var i=0;i<15;i++)c._balls.push({x:Math.random()*cw,y:Math.random()*ch,vx:(Math.random()-.5)*6,vy:(Math.random()-.5)*6,r:Math.max(4,Math.min(cw,ch)*0.02)+Math.random()*Math.min(cw,ch)*0.04,h:Math.random()*360})},
+function(c,w,h,t){
+  c.fillStyle='rgba(0,0,0,.06)';c.fillRect(0,0,w,h);
+  for(var i=0;i<c._balls.length;i++){var b=c._balls[i];b.vy+=.3;b.x+=b.vx;b.y+=b.vy;if(b.x<b.r){b.x=b.r;b.vx*=-.8}if(b.x>w-b.r){b.x=w-b.r;b.vx*=-.8}if(b.y<b.r){b.y=b.r;b.vy*=-.8}if(b.y>h-b.r){b.y=h-b.r;b.vy*=-.8}b.vx*=.99;b.vy*=.99;for(var j=i+1;j<c._balls.length;j++){var o=c._balls[j];var dx=o.x-b.x,dy=o.y-b.y,d=Math.hypot(dx,dy)||1,minD=b.r+o.r;if(d<minD){var overlap=(minD-d)/2;var nx=dx/d,ny=dy/d;b.x-=nx*overlap;b.y-=ny*overlap;o.x+=nx*overlap;o.y+=ny*overlap;var dvx=b.vx-o.vx,dvy=b.vy-o.vy,dn=dvx*nx+dvy*ny;b.vx-=dn*nx;b.vy-=dn*ny;o.vx+=dn*nx;o.vy+=dn*ny}}c.fillStyle='hsla('+b.h+',80%,'+(40+10*Math.sin(i+t*.005))+'%,.7)';c.beginPath();c.arc(b.x,b.y,b.r,0,Math.PI*2);c.fill()}}
+,'Balls fall with gravity, bounce off walls and each other with elastic collision physics, and gradually lose energy through damping.');})();

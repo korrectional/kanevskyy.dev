@@ -36,6 +36,12 @@ function build() {
   fs.mkdirSync(PRIVACY_DIR, { recursive: true });
   fs.copyFileSync(path.join(ROOT, "privacy.html"), path.join(PRIVACY_DIR, "index.html"));
 
+  // copy standalone tools (each tool is a self-contained HTML file/dir)
+  const TOOLS_SRC = path.join(ROOT, "tools");
+  if (fs.existsSync(TOOLS_SRC)) {
+    fs.cpSync(TOOLS_SRC, path.join(DIST_DIR, "tools"), { recursive: true });
+  }
+
 
   const blogFiles = fs.existsSync(POSTS_DIR)
     ? fs.readdirSync(POSTS_DIR).filter(f => f.endsWith(".md"))
@@ -104,14 +110,27 @@ ${html}
     return { ...data, slug };
   });
 
-  // projects index
-  const projectItems = projects.map(p => `<li>
-  <a href="/projects/${p.slug}/">${p.title}</a>
-</li>`).join("\n");
+  // projects index — split into major/other sections
+  const majorProjects = projects.filter(p => p.importance === "major");
+  const otherProjects = projects.filter(p => p.importance !== "major");
+
+  const renderList = items => items.map(p =>
+    `<li><a href="/projects/${p.slug}/">${p.title}</a></li>`
+  ).join("\n");
+
+  let projectContent = `<h1>Projects</h1>`;
+
+  if (majorProjects.length) {
+    projectContent += `<h2>Major Projects</h2><ul class="post-list">${renderList(majorProjects)}</ul>`;
+  }
+
+  if (otherProjects.length) {
+    projectContent += `<h2>Other Projects</h2><ul class="post-list">${renderList(otherProjects)}</ul>`;
+  }
 
   fs.writeFileSync(path.join(PROJECTS_DIST, "index.html"), render({
     title: "Projects — kanevskyy.dev",
-    content: `<h1>Projects</h1><ul class="post-list">${projectItems}</ul>`
+    content: projectContent
   }));
 
   console.log(`Built ${posts.length} post(s) and ${projects.length} project(s).`);
